@@ -5,13 +5,13 @@ Se trata de una aplicación web qque muestre los resultados de los partidos de l
   
  nota:  
  El estado de forma de los jugadores se obtendrá por el sistema de puntuación de la página [comuniazo](www.comuniazo.com). En esta página se muestran las puntuaciones de la página [comunnio](www.comunio.com) que obtiene los datos de las puntuaciones de SportRadar. Para mostrar la forma de los jugadores al usuario se utilizara el apartado que pone media en la sección de jugadores de comuniazo.  
- Para la predicción de los resultados de los partidos se utilizará una media del estado de forma de los jugadores de los últimos cinco partidos que es mostrado en la sección de jugadores en la página de comuniazo. 
+ Para la predicción de los resultados de los partidos se utilizará una media del estado de forma de los jugadores de los últimos cinco partidos que es mostrado en la sección de jugadores en la página de [comuniazo](www.comuniazo.com). 
 
 
 # Tecnologías a usar
 
 HTML5  
-css  
+CSS 
 PHP  
 mysql  
 Se subirá al Paas Amazon o Azure  
