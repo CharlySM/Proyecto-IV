@@ -8,7 +8,7 @@ Se trata de una aplicación web qque muestre los resultados de los partidos de l
  Para la predicción de los resultados de los partidos se utilizará una media del estado de forma de los jugadores de los últimos cinco partidos que es mostrado en la sección de jugadores en la página de comuniazo. 
 
 
-# Basado en
+# Tecnologías a usar
 
 HTML5  
 css  
