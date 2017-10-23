@@ -1,6 +1,6 @@
 # Proyecto-IV
 
-# Descripción
+# Descripción del proyecto
 Se trata de una aplicación web qque muestre los resultados de los partidos de la liga Santander, cuando se hace click en un equipo muestre los estados de forma de los jugadores de ese equipo, mostrará también la clasificación de la liga Santander y habrá un apartado donde se intentará predecir los resultados de la siguiente jornada de la liga Santander, teniendo en cuenta los estados de forma de los jugadores en partidos anteriores.  
   
  nota:  
