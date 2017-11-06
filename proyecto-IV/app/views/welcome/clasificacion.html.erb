@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+        ProyectoIV resultados de la liga
+      </title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        ProyectoIV resultados de la liga
+      </h1>
+      <ul>
+        <li><%= link_to 'Inicio', root_path%></li>
+        <li><%= link_to 'Equipos', equipos_path%></li>
+        <li><%= link_to 'Clasificacion', clasificacion_path%></li>
+        <li><%= link_to 'jornada', jornada_path%></li>
+      </ul>
+    </header>
+    <ol>
+    <%  html=open("https://resultados.as.com/resultados/futbol/primera/clasificacion/").read 
+    #uri = URI.parse("https://resultados.as.com/resultados/futbol/primera/equipos/")
+   # html = open("https://resultados.as.com/resultados/futbol/primera/equipos/")
+    doc=Nokogiri::HTML(html)
+    cont=0
+      array=Array.new(20)
+      doc.search("#clasificacion-total .nombre-equipo").map do |element|
+        cadena=element.inner_text
+        array[cont]=cadena
+
+        cont=cont+1
+      end
+
+    html1=open("http://www.comuniazo.com/laliga")
+    doc1=Nokogiri::HTML(html1)
+    cont=0
+    puntos=Array.new(20)
+    n=0
+    doc1.search(".acenter").map do |element|
+        cadena=element.inner_text
+        puntos[cont]=cadena
+
+        cont=cont+1
+      end
+
+     var=0
+          while var < array.length %>
+              <li> <%=array[var]%> <%=puntos[var]%></li>
+              <% var+=1
+        end %>
+    </ol>
+    <footer>
+      
+    </footer>
+  </body>
+</html>
