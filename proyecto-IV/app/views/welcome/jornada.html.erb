@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+        ProyectoIV resultados de la liga
+      </title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        ProyectoIV resultados de la liga
+      </h1>
+      <ul>
+        <li><%= link_to 'Inicio', root_path%></li>
+        <li><%= link_to 'Equipos', equipos_path%></li>
+        <li><%= link_to 'Clasificacion', clasificacion_path%></li>
+        <li><%= link_to 'jornada', jornada_path%></li>
+      </ul>
+    </header>
+      <%  html=open("https://resultados.as.com/resultados/futbol/primera/jornada/").read 
+        #uri = URI.parse("https://resultados.as.com/resultados/futbol/primera/equipos/")
+        # html = open("https://resultados.as.com/resultados/futbol/primera/equipos/")
+        doc=Nokogiri::HTML(html)
+        cont=0
+        fecha=nil
+        jornada=nil
+        doc.search('.tit-modulo').map do |element|
+          jornada=element.inner_text
+        end
+      %>
+        <h2><%=jornada%></h2>
+      <ul>
+      <%
+        casa=Array.new(10)
+        resultado=Array.new(10)
+        fuera=Array.new(10)
+        hora=Array.new(10)
+        h=0
+        doc.search('.list-resultado .equipo-local .nombre-equipo').map do |element|
+            aux=element.inner_text
+            casa[h]=aux
+            h+=1
+        end
+
+        h=0
+
+        doc.search('.list-resultado .resultado').map do |element|
+            aux=element.inner_text
+            resultado[h]=aux
+            h+=1
+        end
+
+        h=0
+
+        doc.search('.list-resultado .equipo-visitante .nombre-equipo').map do |element|
+            aux=element.inner_text
+            fuera[h]=aux
+            h+=1
+        end
+
+        h=0
+
+        doc.search('.list-resultado .fecha').map do |element|
+            aux=element.inner_text
+            hora[h]=aux
+            h+=1
+        end
+      %>
+      <%con=0
+        while cont<10%>
+        <li><%=casa[cont]%> <%=resultado[cont]%> <%=fuera[cont]%> <%=hora[cont]%></li>
+
+        <%cont+=1
+        end%>
+      </ul>
+    <footer>
+      
+    </footer>
+  </body>
+</html>
