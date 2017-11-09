@@ -1,7 +1,0 @@
-HTML5 
-CSS
-PHP 7.1.10
-PYTHON 2.7.12 o Ruby 2.3.1
-MYSQL Ver 14.14 Distrib 5.7.19
-PaaS Amazon o Azure
-
