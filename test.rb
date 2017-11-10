@@ -1,18 +1,34 @@
 
 require "test/unit"
+require './Equipo.rb'
 
-class TestSimpleNumber < Test::Unit::TestCase
+class TestEquipos < Test::Unit::TestCase
 
   def test_simple
-    equipos=["Barcelona", "Valencia", "Real Madrid", "Sevilla", "Atletico"]
-  	cont=0
     i=0
-    while i<equipos.length()
-      cont+=1
+    equipos = Equipos.new()
+    while i<10
+      equipo = gets.chomp
+      equipos.addEquipo(equipo)
       i+=1
     end
-    assert_equal(5, cont )
-
+    cont=0
+    j=0
+    while j<equipos.size()
+    j+=1
+    cont+=1
+    end
+    assert_equal(10, cont )
+    puts ""
+    equipos.imprime()
+    equipos.BorraEquipo('Barcelona')
+    cont=0
+    j=0
+    while j<equipos.size()
+    j+=1
+    cont+=1
+    end
+    assert_equal(9, cont )
   end
 
 end
