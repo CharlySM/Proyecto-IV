@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel=styleSheet href="css/styles.css" type="text/css">
+    <title>
+        ProyectoIV resultados de la liga
+      </title>
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo">
+        ProyectoIV resultados de la liga
+      </h1>
+      <div class="menu-bar">
+        <ul>
+          <li><a href="/">Inicio</li>
+          <li><a href="/equipos">Equipos</a></li>
+          <li><a href="/clasificacion">Clasificacion</a></li>
+          <li><a href="/jornada">Jornada</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="equipos">
+      <ul>
+      <%  html=open("https://resultados.as.com/resultados/futbol/primera/equipos/").read
+      #uri = URI.parse("https://resultados.as.com/resultados/futbol/primera/equipos/")
+      # html = open("https://resultados.as.com/resultados/futbol/primera/equipos/")
+      doc=Nokogiri::HTML(html)
+      cont=0
+      array=Array.new(20)
+      doc.search('.escudo').map do |element|
+        cadena=element.inner_text
+        array[cont]=cadena
+
+        cont=cont+1
+      end
+
+      var=0
+      while var < array.length %>
+          <li> <%=array[var]%></li>
+              <% var+=1
+      end %>
+      </ul>
+    </div>
+    <footer>
+
+    </footer>
+  </body>
+</html>
