@@ -3,7 +3,6 @@ rvm:
   - 2.3.1
 before_install:
   gem install inspec
-  gem install puma
 
 script:
  inspec exec test.rb
