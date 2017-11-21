@@ -4,7 +4,7 @@ require 'puma'
 preload_app!
 
 rackup      DefaultRackup
-port        ENV['PORT']     || 8080
+port        ENV['PORT']     || 4567
 environment ENV['RACK_ENV'] || 'development'
 
 on_worker_boot do
