@@ -1,1 +1,1 @@
-web: web: bundle exec rackup config.ru
+web: bundle exec puma -C config/puma.rb
