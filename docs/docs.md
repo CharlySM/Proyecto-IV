@@ -12,8 +12,8 @@ Antes de hacer un push para desplegar en Heroku mi aplicación he creado algunos
 Primero he creado un fichero llamado Gemfile.lock que contiene todas las dependencias y especificaciones de las versiones de las gemas que utiliza mi aplicación. También incluirá los lenguajes que mi aplicación utiliza para funcionar.También esta especificado en el fichero la verisón de la gema bundle que utilizo para instalar las gemas necesarias antes de inicar la aplicación.  
 
 Segundo se ha creado un fichero llamado config.ru el cuál contiene dos lineas:  
-⋅⋅* require 'camino donde esta la aplicación'  
-..* run 'Nombre Aplicacion'  
+* require 'camino donde esta la aplicación'  
+* run 'Nombre Aplicacion'  
 De esta manera heroku sabe donde esta la aplicación para ejecutarla.  
 Se ha definido en un fichero .ru ya que la aplciación esta desarrollada en ruby y el despliegue hecho también en ruby. El nombre de aplicación esta definido como una clase en el fichero principal como una clase.  
 
