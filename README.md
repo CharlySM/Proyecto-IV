@@ -15,11 +15,15 @@ CSS
 RUBY  
 mysql  
 Se subirá al Paas Amazon o Azure  
+Finalmente se ha subido a Heroku ya que Amazon y Azure eran de pago y ofrecian muy pocos servicios y en un plazo muy corto.
 
 # Interés
 Es un proyecto de interés personal.
 
-#Integración continua
+# Integración continua
 
 Para hacer integración continua se ha utilizado TRAVIS-CI, lo he elegido por que es fácil de manejar. Se ha utilizado la gema test-unit de ruby para realizar los test.  
 Como no hay una base de datos definida se ha declarado una estructura de datos estática con 5 equipos y el test comprobará que hay 5 equipos. Cuando este la base de datos se comprobará que hay 20 equipos.
+    
+# Enlace despliegue
+[Enlace aplicación](https://morning-wave-97729.herokuapp.com/)
