@@ -25,4 +25,7 @@ Es un proyecto de interés personal.
 # Integración continua
 
 Para hacer integración continua se ha utilizado TRAVIS-CI, lo he elegido por que es fácil de manejar. Se ha utilizado la gema test-unit de ruby para realizar los test.  
-Como no hay una base de datos definida se ha declarado una estructura de datos estática con 5 equipos y el test comprobará que hay 5 equipos. Cuando este la base de datos se comprobará que hay 20 equipos.
+Como no hay una base de datos definida se ha declarado una estructura de datos estática con 5 equipos y el test comprobará que hay 5 equipos. Cuando este la base de datos se comprobará que hay 20 equipos.  
+
+# Despliegue  
+despliegue https://morning-wave-97729.herokuapp.com/
