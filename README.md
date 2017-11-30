@@ -28,4 +28,7 @@ Para hacer integración continua se ha utilizado TRAVIS-CI, lo he elegido por qu
 Como no hay una base de datos definida se ha declarado una estructura de datos estática con 5 equipos y el test comprobará que hay 5 equipos. Cuando este la base de datos se comprobará que hay 20 equipos.  
 
 # Despliegue  
-despliegue https://morning-wave-97729.herokuapp.com/
+despliegue https://morning-wave-97729.herokuapp.com/  
+
+# Enlace docker
+https://hub.docker.com/r/proyectoiv1718/proyecto-iv/  
