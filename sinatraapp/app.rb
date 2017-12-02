@@ -2,10 +2,10 @@ require 'rubygems'
 require 'sinatra'
 require 'nokogiri'
 require 'open-uri'
-require 'sinatra'
+require 'sinatra/reloader' if development?
 require 'json'
 
-
+class Aplicacion < Sinatra::Base
 
 get '/' do
   content_type :json
@@ -22,4 +22,5 @@ end
 
 get '/jornada' do
   erb :jornada
+end
 end
