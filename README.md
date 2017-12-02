@@ -32,3 +32,6 @@ despliegue https://morning-wave-97729.herokuapp.com/
 
 # Enlace docker
 https://hub.docker.com/r/proyectoiv1718/proyecto-iv/  
+
+# Enlace despliegue en zeit  
+https://proyecto-iv-lqfbgimwdb.now.sh/  
