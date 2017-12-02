@@ -6,4 +6,4 @@ RUN bundle install
 
 EXPOSE 80
 
-CMD cd sinatraapp && ruby app.rb
+CMD rackup ./config.ru -p 80
