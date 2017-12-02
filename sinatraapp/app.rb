@@ -2,8 +2,10 @@ require 'rubygems'
 require 'sinatra'
 require 'nokogiri'
 require 'open-uri'
-require 'sinatra' 
+require 'sinatra'
 require 'json'
+
+set :bind, "0.0.0.0"
 
 class Aplicacion < Sinatra::Base
 
