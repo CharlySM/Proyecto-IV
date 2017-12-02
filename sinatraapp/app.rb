@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'nokogiri'
 require 'open-uri'
-require 'sinatra/reloader' if development?
+require 'sinatra' 
 require 'json'
 
 class Aplicacion < Sinatra::Base
