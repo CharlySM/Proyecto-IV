@@ -13,7 +13,7 @@ class Aplicacion < Sinatra::Base
 
 get '/' do
   content_type :json
-  {'OK'}.to_json
+  {:status =>'OK'}.to_json
 end
 
   get '/equipos' do
