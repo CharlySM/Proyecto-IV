@@ -16,6 +16,10 @@ get '/' do
   {:status =>'OK'}.to_json
 end
 
+get '/status' do
+  {'status' => 'OK'}.to_json
+end
+
   get '/equipos' do
     erb :equipos
   end
