@@ -1,6 +1,6 @@
 FROM ruby:2.2-onbuild
 
-COPY  . .
+COPY . .
 
 RUN bundle install
 
