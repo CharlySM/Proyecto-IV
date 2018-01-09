@@ -11,15 +11,13 @@ class Aplicacion < Sinatra::Base
 
   set :port, 80
 
-get '/' do
-  content_type :json
-  {:status =>'OK'}.to_json
-end
+  get '/' do
+    erb :index
+  end
 
-get '/status' do
-  {'status' => 'OK'}.to_json
-end
-
+  #get '/status' do
+  #  {'status' => 'OK'}.to_json
+  #end
   get '/equipos' do
     erb :equipos
   end
