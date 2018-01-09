@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel=styleSheet href="css/styles.css" type="text/css">
     <title>
         ProyectoIV resultados de la liga
       </title>
   </head>
   <body>
     <header>
-      <h1>
+      <h1 class="titulo">
         ProyectoIV resultados de la liga
       </h1>
-      <ul>
-        <li><a href="/">Inicio</li>
-        <li><a href="/equipos">Equipos</a></li>
-        <li><a href="/clasificacion">Clasificacion</a></li>
-        <li><a href="/jornada">Jornada</a></li>
-      </ul>
+      <div class="menu-bar">
+        <ul>
+          <li><a href="/">Inicio</li>
+          <li><a href="/equipos">Equipos</a></li>
+          <li><a href="/clasificacion">Clasificacion</a></li>
+          <li><a href="/jornada">Jornada</a></li>
+        </ul>
+      </div>
     </header>
-    <ol>
+    <table class='clasificacion'>
+      <tr>
+        <th>Puesto</th>
+        <th>Equipo</th>
+        <th>Puntos</th>
+        <th>Partidos Jugados</th>
+        <th>Partidos Ganados</th>
+        <th>Partidos Empatados</th>
+        <th>Partidos Perdidos</th>
+        <th>Goles a favor</th>
+        <th>Goles en contra</th>
+        <th>Diferencia de Goles</th>
+      </tr>
     <%  html=open("https://resultados.as.com/resultados/futbol/primera/clasificacion/").read
     #uri = URI.parse("https://resultados.as.com/resultados/futbol/primera/equipos/")
    # html = open("https://resultados.as.com/resultados/futbol/primera/equipos/")
@@ -54,27 +69,31 @@
 
 
     var=0
+    cont=1
     cadenas=Array.new(20)
     while var < 20
         cad=""
-        cad+=array[var]
+        #cad+=array[var]
+        %>
+        <tr>
+          <th><%=cont%></th>
+          <th><%=array[var]%></th>
+        <%
         j=1
+        cont+=1
         while j<9%>
-          <%cad=cad+" "+puntos[var][j]%>
+          <th><%=puntos[var][j]%></th>
         <%
         j+=1
-        end
-        cadenas.push(cad)
+      end%>
+        </tr>
+        <%
+        #cadenas.push(cad)
         var+=1
     end
-    s=20
-    while s<cadenas.length%>
-    <li><%=cadenas[s]%></li>
-    <%s+=1
-    end
-    %>
 
-    </ol>
+    %>
+  </table>
     <footer>
 
     </footer>

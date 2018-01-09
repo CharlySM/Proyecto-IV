@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel=styleSheet href="css/styles.css" type="text/css">
     <title>
         ProyectoIV resultados de la liga
       </title>
   </head>
   <body>
     <header>
-      <h1>
+      <h1 class="titulo">
         ProyectoIV resultados de la liga
       </h1>
-      <ul>
-        <li><a href="/">Inicio</li>
-        <li><a href="/equipos">Equipos</a></li>
-        <li><a href="/clasificacion">Clasificacion</a></li>
-        <li><a href="/jornada">Jornada</a></li>
-      </ul>
+      <div class="menu-bar">
+        <ul>
+          <li><a href="/">Inicio</li>
+          <li><a href="/equipos">Equipos</a></li>
+          <li><a href="/clasificacion">Clasificacion</a></li>
+          <li><a href="/jornada">Jornada</a></li>
+        </ul>
+      </div>
     </header>
       <%  html=open("https://resultados.as.com/resultados/futbol/primera/jornada/").read
         #uri = URI.parse("https://resultados.as.com/resultados/futbol/primera/equipos/")
@@ -28,7 +31,10 @@
           jornada=element.inner_text
         end
       %>
+      <div class='jornada'>
         <h2><%=jornada%></h2>
+      </div>
+      <div class='equipos-jornada'>
       <ul>
       <%
         casa=Array.new(10)
@@ -69,10 +75,11 @@
       <%con=0
         while cont<10%>
         <li><%=casa[cont]%> <%=resultado[cont]%> <%=fuera[cont]%> <%=hora[cont]%></li>
-
+        <li><br></li>
         <%cont+=1
         end%>
       </ul>
+    </div>
     <footer>
 
     </footer>
