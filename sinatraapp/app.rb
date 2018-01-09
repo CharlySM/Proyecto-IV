@@ -7,7 +7,7 @@ require 'json'
 
 set :bind, "0.0.0.0"
 
-class Aplicacion < Sinatra::Base
+#class Aplicacion < Sinatra::Base
 
   set :port, 80
 
@@ -30,4 +30,4 @@ class Aplicacion < Sinatra::Base
     erb :jornada
   end
 
-end
+#end
