@@ -12,12 +12,14 @@ set :bind, "0.0.0.0"
   set :port, 80
 
   get '/' do
-    erb :index
-  end
+  content_type :json
+  {:status =>'OK'}.to_json
+end
 
-  #get '/status' do
-  #  {'status' => 'OK'}.to_json
-  #end
+get '/status' do
+  {'status' => 'OK'}.to_json
+end
+
   get '/equipos' do
     erb :equipos
   end
