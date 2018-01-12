@@ -40,4 +40,4 @@ Contenedor: https://proyecto-iv-pzmvkjlfis.now.sh/
 Ver direcorio docs fichero 'despliegue en amazon'
 
 # Despliegue final  
-Desppliegue final: ec2-18-196-105-0.eu-central-1.compute.amazonaws.com
+Desppliegue final: 18.196.105.0
