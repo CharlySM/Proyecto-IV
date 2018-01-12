@@ -1,8 +1,4 @@
 
-HOSTNAME = 'debugserver'
-IP = "192.168.77.20"
-NETWORK_MASK = "255.0.0.0"
-NETWORK_GATEWAY = "51.0.0.1"
 
 Vagrant.configure("2") do |config|
 
@@ -43,7 +39,7 @@ end
   # Run Ansible from the Vagrant Host
   #
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "ansible.yml"
+    ansible.playbook = "./provision/ansible.yml"
     ansible.verbose        = true
     #ansible.extra_vars =
     #    {
