@@ -19,8 +19,8 @@ config.vm.define "liga" do |host|
 end
   config.vm.provider 'aws' do |aws, override|
    # Read AWS authentication information from environment variables
-    aws.access_key_id = 'AssdadA'
-    aws.secret_access_key = 'dasdas'
+    aws.access_key_id = 'access_key_id'
+    aws.secret_access_key = 'secret_access_key'
 
    # Specify SSH keypair to use
    aws.keypair_name = 'key'
