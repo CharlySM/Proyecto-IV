@@ -34,4 +34,10 @@ despliegue https://morning-wave-97729.herokuapp.com/
 https://hub.docker.com/r/proyectoiv1718/proyecto-iv/  
 
 # Enlace despliegue en zeit  
-Contenedor: https://proyecto-iv-pzmvkjlfis.now.sh/ 
+Contenedor: https://proyecto-iv-pzmvkjlfis.now.sh/
+
+# Despliegue en amazon  
+Ver direcorio docs fichero 'despliegue en amazon'
+
+# Despliegue final  
+Desppliegue final: ec2-18-196-105-0.eu-central-1.compute.amazonaws.com
