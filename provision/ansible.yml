@@ -1,0 +1,124 @@
+#hosts: all
+- hosts: all
+  sudo: yes
+  gather_facts: False
+#  vars:
+#    http_port: 80
+#    domain: example.com
+
+  tasks:
+   - name: Update apt-get
+     raw: apt-get update -qq
+   - name: Install python 2.7
+     raw: apt-get install -qq python2.7
+
+
+    #- name: Add repositories
+    #  apt_repository: repo='ppa:rael-gc/rvm' state=present
+
+  #  - name: 1. install Apache
+  #    apt: name=apache2 state=present
+
+  #  - name: enabled mod_rewrite
+    #  apache2_module: name=rewrite state=present
+      #notify:
+      #  - restart apache2
+
+  #  - name: 2. install PHP module for Apache
+    #  apt: name=libapache2-mod-php5 state=present
+
+  #  - name: 3. start Apache
+  #    service: name=apache2 state=running enabled=yes
+
+  #  - name: apache2 listen on port 8081
+  #    lineinfile: dest=/etc/apache2/ports.conf regexp="^Listen " line="Listen {{ http_port }}" state=present
+      #notify:
+        #- restart apache2
+
+#    - name: apache2 virtualhost on port 8081
+#      lineinfile: dest=/etc/apache2/sites-available/000-default.conf regexp="^<VirtualHost \*:" line="<VirtualHost *:{{ http_port }}>"
+      #notify:
+        #- restart apache2
+
+#    - name: create virtual host file
+#      template: src=virtualhost.conf dest=/etc/apache2/sites-available/{{ domain }}.conf
+
+#    - name: a2ensite {{ domain }}
+#      command: a2ensite {{ domain }}
+#      args:
+#        creates: /etc/apache2/sites-enabled/{{ domain }}.conf
+
+   - name: 1. instalar ruby-sinatra
+     raw: apt-get install -qq ruby-sinatra
+
+    #- name: Latest version of Ruby is installed
+    #  apt: name=ruby2.3.1 state=latest
+
+    #- name: Making Ruby 2.3.1 the default one
+    #  command: update-alternatives --set ruby /usr/bin/ruby2.3.1
+
+    #- name: Making Gem 2.3.1 the default one
+    #  command: update-alternatives --set gem /usr/bin/gem2.3.1
+
+   - name: Install Bundler
+     raw: gem install bundler
+
+
+#    - name: 5. copio prueba.rb
+#      copy: src=Gemfile dest=/var/www/Gemfile mode=0664
+
+    #- bundler:
+    #    state: present
+    #    gemfile: /var/www/Gemfile
+    #    executable: /usr/local/bin/bundle
+
+    #- name: bundler
+    #  command: cd /var/www && bundle install
+
+   - name: rub-dev
+     raw: apt-get install -qq ruby-dev
+
+   - name: lib1
+     raw: apt-get install -qq libxml2
+
+   - name: lib2
+     raw: apt-get install -qq libxml2-dev
+
+   - name: lib3
+     raw: apt-get install -qq libxslt1-dev
+
+   - name: build-essential patch zlib1g-dev liblzma-dev
+     raw: apt-get install -qq build-essential patch zlib1g-dev liblzma-dev
+
+   - name: Nokogiri
+     raw: gem install nokogiri
+
+   - name: open-uri
+     raw: gem install rubysl-open-uri
+
+    #- name: 4.1. directorio views
+    #  file: path=/var/www/views state=directory owner=root group=root
+
+   - name: instalo git
+     raw: apt-get install -qq git
+
+   #- name: Clonar GitHub
+  #   raw: git clone git://github.com/CharlySM/Proyecto-IV
+     #git: repo=https://github.com/CharlySM/Proyecto-IV dest=Proyecto-IV clone=yes force=yes
+
+   #- name: mover proyecto
+    # raw: mv Proyecto-IV /var/www
+
+    #- name: 5.1 paro apache2
+    #  service: name=apache2 state=stopped enabled=no
+
+   #- name: 6. ejecuto app ruby
+    # command: ruby Proyecto-IV/sinatraapp/app.rb -p 80
+
+  #    notify:
+  #      - stop apache2
+
+
+  ##handlers:
+    #- name: stop apache2
+    #  service: name=apache2 state=stopped
